@@ -6,7 +6,7 @@
  * Version: 1.0.0
  * Requires at least: 5.8
  * Requires PHP: 7.4
- * Author: Your Name
+ * Author: Nitya Saha
  * Author URI: https://codesocials.com
  * License: GPL v2 or later
  * License URI: https://www.gnu.org/licenses/gpl-2.0.html
@@ -127,15 +127,15 @@ class Seasonal_Effects {
      * @return array
      */
     public function insert_view_logs_link( $links ) {
-        $settings_link = '<a href="' . esc_url( admin_url( 'admin.php?page=wc-settings&tab=share_cart_url' ) ) . '">' . esc_html__( 'Settings', 'share-cart-for-woocommerce' ) . '</a>';
+        $settings_link = '<a href="' . esc_url( admin_url( 'admin.php?page=wc-settings&tab=share_cart_url' ) ) . '">' . esc_html__( 'Settings', 'seasonal-effects' ) . '</a>';
         array_unshift( $links, $settings_link );
         return $links;
     }
 
     public function addon_plugin_links( $links, $file ) {
         if ( $file === $this->plugin_basename ) {
-            $links[] = __( '<a href="https://buymeacoffee.com/nityasaha" style="font-weight:bold;color:#00d300;font-size:15px;">Donate</a>', 'share-cart-for-woocommerce' );
-            $links[] = __( 'Made with Love ❤️', 'share-cart-for-woocommerce' );
+            $links[] = __( '<a href="https://buymeacoffee.com/nityasaha" style="font-weight:bold;color:#00d300;font-size:15px;">Donate</a>', 'seasonal-effects' );
+            $links[] = __( 'Made with Love ❤️', 'seasonal-effects' );
         }
 
         return $links;

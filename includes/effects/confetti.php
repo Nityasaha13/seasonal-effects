@@ -8,7 +8,7 @@ if (!defined('ABSPATH')) {
     exit;
 }
 
-$rgb = hex_to_rgb($color);
+$seasonal_effects_rgb = hex_to_rgb($color);
 ?>
 
 <canvas id="seasonal-effect-canvas" style="position:fixed;top:0;left:0;width:100%;height:100%;pointer-events:none;z-index:<?php echo esc_attr($z_index); ?>;"></canvas>
@@ -31,7 +31,7 @@ $rgb = hex_to_rgb($color);
     
     const confetti = [];
     const numberOfPieces = <?php echo esc_js($particle_count); ?>;
-    const baseColor = {r: <?php echo esc_js($rgb['r']); ?>, g: <?php echo esc_js($rgb['g']); ?>, b: <?php echo esc_js($rgb['b']); ?>};
+    const baseColor = {r: <?php echo esc_js($seasonal_effects_rgb['r']); ?>, g: <?php echo esc_js($seasonal_effects_rgb['g']); ?>, b: <?php echo esc_js($seasonal_effects_rgb['b']); ?>};
     
     // Create color variations based on base color
     const colors = [
